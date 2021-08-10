@@ -92,23 +92,26 @@ class _numberscreenState extends State<numberscreen> {
                           keyboardType: TextInputType.number,
                           maxLength: 10,
                           decoration: InputDecoration(
-                              // hintText: "+91",
-                              // hintStyle: TextStyle(color: Colors.black),
+                            // hintText: "+91",
+                            // hintStyle: TextStyle(color: Colors.black),
 
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(5),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            prefix: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8),
+                              child: Text(
+                                '+91',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
                               ),
-                              prefix: Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 8),
-                                  child: Text('+91',
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold))),
-                              suffixIcon: Icon(
-                                Icons.check_circle,
-                                color: Colors.green,
-                                size: 32,
-                              )),
+                            ),
+                            suffixIcon: Icon(
+                              Icons.check_circle,
+                              color: Colors.green,
+                              size: 32,
+                            ),
+                          ),
                         ),
 
                         // SizedBox(
@@ -131,20 +134,24 @@ class _numberscreenState extends State<numberscreen> {
               child: Container(
                 alignment: Alignment.bottomCenter,
                 child: InkWell(
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.deepOrange,
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.deepOrange,
+                      ),
+                      child: Text(
+                        "Get Verification Code",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
                     ),
-                    child: Text(
-                      "Get Verification Code",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>verificationscreen()));}
-                ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => verificationscreen()));
+                    }),
               ),
             ),
           ],

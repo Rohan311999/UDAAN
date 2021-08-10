@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'homescreen.dart';
+
 class informationscreen extends StatefulWidget {
   const informationscreen({Key? key}) : super(key: key);
 
@@ -159,17 +161,25 @@ class _informationscreenState extends State<informationscreen> {
                 alignment: Alignment.bottomCenter,
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 0),
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.deepOrange,
+                  child: InkWell(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.deepOrange,
+                      ),
+                      child: Text(
+                        "Next",
+                        style:
+                            TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
                     ),
-                    child: Text(
-                      "Next",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                    ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => homescreen()));
+                    }
                   ),
                 ),
               ),
