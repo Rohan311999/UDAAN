@@ -63,29 +63,19 @@ class _verificationscreenState extends State<verificationscreen> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             _textfieldOTP(first: true, last: false),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            _textfieldOTP(first: true, last: false),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            _textfieldOTP(first: true, last: false),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            _textfieldOTP(first: true, last: false),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            _textfieldOTP(first: true, last: false),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            _textfieldOTP(first: true, last: true),
+                           
+                            _textfieldOTP(first: false, last: false),
+                          
+                            _textfieldOTP(first: false, last: false),
+                            
+                            _textfieldOTP(first: false, last: false),
+                           
+                            _textfieldOTP(first: false, last: false),
+                            
+                            _textfieldOTP(first: false, last: true),
                           ],
                         ),
                       ),
@@ -130,7 +120,7 @@ class _verificationscreenState extends State<verificationscreen> {
                     alignment: Alignment.center,
                     height: 50,
                     decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: Colors.deepOrange,
                     ),
                     child: Text(
                       "Submit",
@@ -182,7 +172,7 @@ class _verificationscreenState extends State<verificationscreen> {
                 borderRadius: BorderRadius.circular(12),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 2, color: Colors.black12),
+                borderSide: BorderSide(width: 2, color:Colors.red),
                 borderRadius: BorderRadius.circular(12),
               ),
             ),

@@ -1,13 +1,19 @@
+import 'dart:js';
+
+
 import 'package:flutter/material.dart';
 import 'package:udan/screens/homescreen.dart';
-import 'package:udan/screens/informationscreen.dart';
-import 'package:udan/screens/numberscreen.dart';
+import 'package:flutter/services.dart';
+import 'package:udan/screens/profilescreen.dart';
 import 'package:udan/screens/startscreen.dart';
-import 'package:udan/screens/tncscreen.dart';
 import 'package:udan/screens/udaanscreen.dart';
 import 'package:udan/screens/verificationscreen.dart';
 
+
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.red[900],
+  ));
   runApp(MyApp());
 }
 
@@ -123,3 +129,263 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+Widget MyDrawer()=>Container(
+                color: Colors.black,
+                child: ListView(
+                  // scrollDirection: Axis.vertical,
+                  children: [
+                    // UserAccountsDrawerHeader(
+                    //   accountName: Text(
+                    //     "Rohan Patil",
+                    //     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    //   ),
+                    //   accountEmail: Text(
+                    //     "rohan123@gmail.com",
+                    //     style: TextStyle(fontWeight: FontWeight.bold),
+                    //   ),
+                    //   currentAccountPicture: CircleAvatar(
+                    //     backgroundColor: Colors.purple,
+                    //     child: Text(
+                    //       "R",
+                    //       style:
+                    //           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    //     ),
+                    //   ),
+                    // ),
+                    InkWell(
+                      child: Container(
+                        height: 80,
+                        // margin: EdgeInsets.only(top:30),
+                        alignment: Alignment.center,
+                        color:Colors.white10,
+                        child: ListTile(
+                          
+                          selectedTileColor: Colors.red,
+                          tileColor: Colors.blue,
+                                title: Text(
+                                  'Rohan Patil',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              subtitle: Text("7798217718",style: TextStyle(color: Colors.white),),
+                                trailing: Icon(Icons.arrow_right_outlined,color: Colors.white,size: 40,),
+                                leading: CircleAvatar(
+                                              backgroundColor: Colors.white,
+                                              radius: 22.0,
+                                              child: Container(
+                                                alignment: Alignment.centerLeft,
+                                                decoration: BoxDecoration(
+                                                    shape: BoxShape.rectangle,
+                                                    image: DecorationImage(
+                                                      image: AssetImage(
+                                                        "images/udaan1.jpeg",
+                                                      ),
+                                                      fit: BoxFit.fill,
+                                                    )),
+                                              )),
+                              ),
+                              
+                      ),
+                    onTap: (){},
+                      
+                    ),
+                      ListTile(
+                            title: Text(
+                              'categories',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            leading: Icon(
+                              Icons.category,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Divider(
+                            color: Colors.white,
+                          ),
+                          ListTile(
+                            title: Text(
+                              'Your Oreders',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.wallet_giftcard,
+                              color: Colors.white,
+                            ),
+                          ),
+                          ListTile(
+                            title: Text(
+                              'Your Returns',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.keyboard_return,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Divider(
+                            color: Colors.white,
+                          ),
+                          ListTile(
+                            title: Text(
+                              'Rate Card',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.money,
+                              color: Colors.white,
+                            ),
+                          ),
+                          ListTile(
+                            title: Text(
+                              'pay',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.payment,
+                              color: Colors.white,
+                            ),
+                          ),
+                          ListTile(
+                            title: Text(
+                              'sell on',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.sell,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Divider(
+                            color: Colors.white,
+                          ),
+                          ListTile(
+                            title: Text(
+                              'Support',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.support,
+                              color: Colors.white,
+                            ),
+                          ),
+                          ListTile(
+                            title: Text(
+                              'Terms of Use',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.pages,
+                              color: Colors.white,
+                            ),
+                          ),
+                          ListTile(
+                            title: Text(
+                              'Policies',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.policy_rounded,
+                              color: Colors.white,
+                            ),
+                          ),
+                          ListTile(
+                            title: Text(
+                              'About',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.app_settings_alt,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Divider(
+                            color: Colors.white,
+                          ),
+                          ListTile(
+                            title: Text(
+                              'Language',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.language,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Divider(
+                            color: Colors.white,
+                          ),
+                          ListTile(
+                            title: Text(
+                              'Expert Picks',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.explore,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Divider(
+                            color: Colors.white,
+                          ),
+                          ListTile(
+                            title: Text(
+                              'Logout',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            leading: Icon(
+                              Icons.logout,
+                              color: Colors.white,
+                            ),
+                          ),
+    
+                
+                  ],
+                )
+                //   ],
+                // ),
+                );
+
